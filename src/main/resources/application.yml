@@ -1,0 +1,11 @@
+logging:
+#  file: logs/${spring.application.name}.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  level:
+    com.daimler.travelbook: DEBUG
+    org.hibernate: WARN
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF
+    org.springframework.cloud.config: OFF
+    de.codecentric.boot: OFF

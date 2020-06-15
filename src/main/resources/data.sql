@@ -1,0 +1,45 @@
+DROP TABLE IF EXISTS Person cascade;
+
+CREATE TABLE Person (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  first_name VARCHAR(250) NOT NULL,
+  last_name VARCHAR(250) NOT NULL,
+  customerID INT DEFAULT NULL,
+  supplierID INT DEFAULT NULL,
+  PHONE_ID INT NOT NULL
+);
+
+DROP TABLE IF EXISTS Company cascade;
+
+CREATE TABLE Company (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  name VARCHAR(250) NOT NULL,
+  registration_number VARCHAR(250) NOT NULL,
+  customerID INT DEFAULT NULL,
+  supplierID INT DEFAULT NULL,
+  PHONE_ID INT NOT NULL
+);
+
+DROP TABLE IF EXISTS Customer cascade;
+
+CREATE TABLE Customer (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  last_order DATE NOT NULL
+);
+
+
+DROP TABLE IF EXISTS Supplier;
+
+CREATE TABLE Supplier (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  tax_number VARCHAR(250) NOT NULL,
+  order_lead_time_in_days INT NOT NULL
+);
+
+DROP TABLE IF EXISTS PhoneNumber;
+
+CREATE TABLE PhoneNumber (
+  phoneId INT AUTO_INCREMENT  PRIMARY KEY,
+  area_code INT NOT NULL,
+  number INT NOT NULL
+);

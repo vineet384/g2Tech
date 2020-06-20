@@ -3,7 +3,7 @@ logging:
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
   level:
-    com.daimler.travelbook: DEBUG
+    com.g2techsoft.assessment: DEBUG
     org.hibernate: WARN
     com.netflix.eureka: OFF
     com.netflix.discovery: OFF
